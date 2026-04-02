@@ -1,0 +1,21 @@
+# HTTrack-generated cache and logs
+/hts-cache/
+/hts-log.txt
+*.delayed
+
+# Duplicate/compressed mirror artifacts
+*.z
+
+# Leftover assets from the old HTTrack index wrapper
+/backblue.gif
+/fade.gif
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
