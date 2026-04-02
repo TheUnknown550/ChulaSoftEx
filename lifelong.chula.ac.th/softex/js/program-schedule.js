@@ -279,7 +279,7 @@
           '<div class="program-schedule-calendar__days">' +
           cellsMarkup +
           "</div>" +
-          '<div class="program-schedule-calendar__hover-card" hidden>' +
+          '<div class="program-schedule-calendar__hover-card" data-theme="orange" hidden>' +
           '<p class="program-schedule-calendar__hover-label">วันที่</p>' +
           '<p class="program-schedule-calendar__hover-value" data-field="date"></p>' +
           '<p class="program-schedule-calendar__hover-label">หัวข้อ</p>' +
@@ -394,9 +394,11 @@
     const dateField = hoverCard.querySelector('[data-field="date"]');
     const topicField = hoverCard.querySelector('[data-field="topic"]');
     const speakersField = hoverCard.querySelector('[data-field="speakers"]');
+    const category = categoryConfig[entry.category];
 
     dateField.textContent = entry.dateLabel;
     topicField.textContent = entry.topic;
+    hoverCard.setAttribute("data-theme", category ? category.color : "orange");
     speakersField.innerHTML = entry.speakers
       .map(function (speaker) {
         if (shouldSkipSpeakerLine(speaker)) {
