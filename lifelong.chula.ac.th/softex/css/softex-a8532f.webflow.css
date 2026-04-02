@@ -1177,7 +1177,7 @@ figcaption {
   z-index: 0;
   mix-blend-mode: luminosity;
   object-fit: cover;
-  background-image: linear-gradient(#000000bf, #000000bf), url('../images/Ethereal-Abstract-Art_1Ethereal%20Abstract%20Art.avif');
+  background-image: linear-gradient(#000000bf, #000000bf), url('../images/backgrounds/abstract-iridescent-background.avif');
   background-position: 0 0, 50%;
   width: 100%;
   height: 100%;
@@ -2115,7 +2115,7 @@ figcaption {
   -webkit-text-fill-color: inherit;
   object-fit: fill;
   background-color: gray;
-  background-image: url('../images/Desktop---8.png');
+  background-image: url('../images/hero/hero-section-background.png');
   background-position: 50% 99%;
   background-repeat: repeat;
   background-size: cover;
@@ -2618,7 +2618,7 @@ figcaption {
 }
 
 .speaker {
-  background-image: url('../images/Desktop---11-1.png');
+  background-image: url('../images/speakers/speakers-section-background.png');
   background-position: 50% 100%;
   background-size: cover;
   padding-bottom: 0;
@@ -4325,7 +4325,7 @@ figcaption {
 
   .hero-bg {
     background-color: #f3f9ff;
-    background-image: url('../images/Desktop---8.png');
+    background-image: url('../images/hero/hero-section-background.png');
     background-repeat: repeat;
     background-size: cover;
   }
@@ -5613,7 +5613,7 @@ figcaption {
   }
 
   .hero-container {
-    background-image: url('../images/Desktop---8.png');
+    background-image: url('../images/hero/hero-section-background.png');
     background-position: 50% 99%;
     background-repeat: repeat;
     background-size: 100% 133%;
@@ -5799,7 +5799,7 @@ figcaption {
   }
 
   .hero-wrapper-two {
-    background-image: url('../images/Desktop---13-2.png');
+    background-image: url('../images/speakers/speakers-section-background-mobile.png');
     background-position: 50% 100%;
     background-size: cover;
     padding-top: 37px;
