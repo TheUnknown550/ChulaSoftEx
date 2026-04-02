@@ -11,7 +11,7 @@
     weekdayLabels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     calendars: [
       {
-        year: 2025,
+        year: 2026,
         month: 11,
         visibleWeeks: 5,
         highlightedDates: [
@@ -25,7 +25,7 @@
         ]
       },
       {
-        year: 2025,
+        year: 2026,
         month: 12,
         visibleWeeks: 5,
         highlightedDates: [
