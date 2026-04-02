@@ -6773,6 +6773,11 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
+  .speaker .container-large,
+  .speaker .container-7 {
+    overflow: visible;
+  }
+
   .speaker-teaser-section {
     padding-top: 2rem;
     padding-bottom: .75rem;
@@ -6791,17 +6796,30 @@ figcaption {
 
   .speaker-grid {
     --speaker-card-width: 11.25rem;
-    grid-column-gap: 1rem;
-    grid-row-gap: 1.2rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    box-sizing: border-box;
     width: 100%;
-    display: grid;
-    align-items: start;
-    gap: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    overflow: visible;
+    gap: 1.4rem;
   }
 
   .speaker-grid__row {
-    display: contents;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: min(100%, calc(var(--speaker-card-width) * 3 + 2rem));
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 1rem;
+    row-gap: 1.4rem;
+    overflow: visible;
   }
 
   .speaker-grid__row--primary .speaker-card + .speaker-card,
@@ -6810,13 +6828,14 @@ figcaption {
   }
 
   .speaker-card {
-    width: 100%;
+    flex: 0 0 var(--speaker-card-width);
+    width: var(--speaker-card-width);
     --speaker-font-scale: .95;
   }
 
   .speaker-grid__row--primary .speaker-card__media,
   .speaker-grid__row--secondary .speaker-card__media {
-    width: min(100%, var(--speaker-card-width));
+    width: 100%;
     max-width: none;
   }
 }
@@ -6837,8 +6856,15 @@ figcaption {
 
   .speaker-grid {
     --speaker-card-width: 10.5rem;
-    grid-column-gap: .8rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.15rem;
+  }
+
+  .speaker-grid__row {
+    width: min(100%, calc(var(--speaker-card-width) * 2 + .85rem));
+    column-gap: .85rem;
+    row-gap: 1.15rem;
   }
 
   .speaker-card {
@@ -6847,6 +6873,10 @@ figcaption {
 }
 
 @media screen and (max-width: 479px) {
+  .speaker .container-7 {
+    display: block;
+  }
+
   .speaker-teaser-section {
     padding-top: 1.5rem;
     padding-bottom: .25rem;
@@ -6861,7 +6891,15 @@ figcaption {
 
   .speaker-grid {
     --speaker-card-width: 9rem;
-    grid-column-gap: .7rem;
+    padding-left: .875rem;
+    padding-right: .875rem;
+    gap: 1rem;
+  }
+
+  .speaker-grid__row {
+    width: min(100%, calc(var(--speaker-card-width) * 2 + .7rem));
+    column-gap: .7rem;
+    row-gap: 1rem;
   }
 
   .speaker-card {
