@@ -112,15 +112,15 @@
     {
       "id": "speaker-09-rehana-mughal",
       "name": "Ms. Rehana Mughal",
-      "sourceImage": "",
+      "sourceImage": "images/speakers/2026-speakers-with-borders/Ms. Rehana Mughal.png",
       "detail": "waiting for profile details",
-      "name_left_margin": "20%",
-      "name_right_margin": "20%",
+      "name_left_margin": "40%",
+      "name_right_margin": "-10%",
       "name_font_size": "0.68rem",
       "description_left_margin": "35%",
       "description_right_margin": "0%",
       "description_font_size": "0.48rem",
-      "hasSourceImage": false
+      "hasSourceImage": true
     },
     {
       "id": "speaker-11-pichit-weerangkoobut",
@@ -138,15 +138,15 @@
     {
       "id": "speaker-12-kharin-kangwanakitti",
       "name": "คุณฆฤณ กังวานกิตติ",
-      "sourceImage": "",
+      "sourceImage": "images/speakers/2026-speakers-with-borders/คุณฆฤณ กังวานกิตติ.png",
       "detail": "waiting for profile details",
-      "name_left_margin": "20%",
-      "name_right_margin": "20%",
+      "name_left_margin": "40%",
+      "name_right_margin": "-10%",
       "name_font_size": "0.68rem",
       "description_left_margin": "35%",
       "description_right_margin": "0%",
       "description_font_size": "0.48rem",
-      "hasSourceImage": false
+      "hasSourceImage": true
     },
     {
       "id": "speaker-13-dolchai-bunyaratavej",

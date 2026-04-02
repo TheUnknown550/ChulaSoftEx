@@ -2621,6 +2621,7 @@ figcaption {
   background-image: url('../images/speakers/speakers-section-background.png');
   background-position: 50% 100%;
   background-size: cover;
+  padding-top: 2rem;
   padding-bottom: 0;
 }
 
@@ -6608,15 +6609,16 @@ figcaption {
 .speaker-grid {
   --speaker-primary-card-width: 12.4rem;
   --speaker-secondary-card-width: 9.1rem;
-  --speaker-primary-overlap: 1.35rem;
-  --speaker-secondary-overlap: 1rem;
+  --speaker-primary-overlap: 1.75rem;
+  --speaker-secondary-overlap: 1.25rem;
   width: min(100%, 78rem);
+  margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .55rem;
+  gap: 1rem;
 }
 
 .speaker-grid__row {
@@ -6789,8 +6791,8 @@ figcaption {
 
   .speaker-grid {
     --speaker-card-width: 11.25rem;
-    grid-column-gap: 1.25rem;
-    grid-row-gap: 1.5rem;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1.2rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
     display: grid;
@@ -6835,7 +6837,7 @@ figcaption {
 
   .speaker-grid {
     --speaker-card-width: 10.5rem;
-    grid-column-gap: 1rem;
+    grid-column-gap: .8rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -6859,7 +6861,7 @@ figcaption {
 
   .speaker-grid {
     --speaker-card-width: 9rem;
-    grid-column-gap: .875rem;
+    grid-column-gap: .7rem;
   }
 
   .speaker-card {
