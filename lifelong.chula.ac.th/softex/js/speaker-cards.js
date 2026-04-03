@@ -4,7 +4,7 @@
   const primaryRowEnterDelaySeconds = 0;
   const secondaryRowEnterDelaySeconds = 0.18;
   const nameMaxLines = 2;
-  const detailMaxLines = 2;
+  const detailMaxLines = 3;
   const minNameFitScale = 0.52;
   const minDetailFitScale = 0.72;
   const desktopPrimaryCardWidthRem = 12.4;

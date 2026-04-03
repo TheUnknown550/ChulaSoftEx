@@ -6651,8 +6651,9 @@ figcaption {
   --speaker-font-scale: 1;
   --speaker-name-fit-scale: 1;
   --speaker-detail-fit-scale: 1;
+  --speaker-detail-max-lines: 3;
   --speaker-text-anchor-bottom: 5%;
-  --speaker-detail-reserved-height: calc(1.45rem * var(--speaker-font-scale));
+  --speaker-detail-reserved-height: calc((var(--speaker-description-font-size) * 1.2 * var(--speaker-detail-max-lines) + .15rem) * var(--speaker-font-scale));
   --speaker-name-bottom: calc(var(--speaker-text-anchor-bottom) + var(--speaker-detail-reserved-height) + .12rem);
   --speaker-description-bottom: var(--speaker-text-anchor-bottom);
   opacity: 0;
@@ -6735,7 +6736,7 @@ figcaption {
   line-height: 1.2;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow-wrap: break-word;
   word-break: normal;
@@ -6769,7 +6770,7 @@ figcaption {
 }
 
 .speaker-grid__row--secondary .speaker-card {
-  --speaker-detail-reserved-height: calc(1.45rem * var(--speaker-font-scale));
+  --speaker-detail-reserved-height: calc((var(--speaker-description-font-size) * 1.2 * var(--speaker-detail-max-lines) + .15rem) * var(--speaker-font-scale));
 }
 
 .speaker-grid__row--secondary .speaker-card__media {
