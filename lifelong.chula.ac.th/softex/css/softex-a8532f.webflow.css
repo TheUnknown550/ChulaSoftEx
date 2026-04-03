@@ -2115,7 +2115,7 @@ figcaption {
   -webkit-text-fill-color: inherit;
   object-fit: fill;
   background-color: gray;
-  background-image: url('../images/hero/hero-section-background.png');
+  background-image: url('../images/2026_images/optimized/hero-bg-desktop.webp');
   background-position: 50% 99%;
   background-repeat: repeat;
   background-size: cover;
@@ -2164,7 +2164,6 @@ figcaption {
 }
 
 .image-7 {
-  width: 171px;
   margin-top: -9px;
   margin-left: -5px;
   padding-bottom: 0;
@@ -2618,7 +2617,7 @@ figcaption {
 }
 
 .speaker {
-  background-image: url('../images/speakers/speakers-section-background.png');
+  background-image: url('../images/2026_images/optimized/speaker-bg-desktop.webp');
   background-position: 50% 100%;
   background-size: cover;
   padding-top: 2rem;
@@ -2893,8 +2892,8 @@ figcaption {
 }
 
 .image-21 {
-  width: auto;
-  max-width: 150px;
+  width: 190px;
+  max-width: 100%;
   margin-bottom: 10px;
   margin-left: 0;
 }
@@ -2909,20 +2908,22 @@ figcaption {
 }
 
 .image-26 {
+  width: 63rem;
+  max-width: calc(100vw - 4rem);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  min-width: 79%;
+  min-width: 0;
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: 0;
-  padding-left: 192px;
-  padding-right: 192px;
+  padding-left: 0;
+  padding-right: 0;
   font-size: 1rem;
   line-height: 28;
-  display: inline-flex;
+  display: block;
 }
 
 .bold-text-6, .bold-text-7 {
@@ -3728,7 +3729,7 @@ figcaption {
 }
 
 .image-106 {
-  width: 145px;
+  width: 170px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -4326,7 +4327,7 @@ figcaption {
 
   .hero-bg {
     background-color: #f3f9ff;
-    background-image: url('../images/hero/hero-section-background.png');
+    background-image: url('../images/2026_images/optimized/hero-bg-desktop.webp');
     background-repeat: repeat;
     background-size: cover;
   }
@@ -4458,8 +4459,10 @@ figcaption {
   }
 
   .image-26 {
-    padding-left: 140px;
-    padding-right: 140px;
+    width: 55.5rem;
+    max-width: calc(100vw - 3rem);
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .container-10 {
@@ -4783,6 +4786,19 @@ figcaption {
     margin-left: 11px;
   }
 
+  .image-21 {
+    width: 170px;
+  }
+
+  .image-26 {
+    width: 40.5rem;
+    max-width: calc(100vw - .75rem);
+  }
+
+  .image-106 {
+    width: 155px;
+  }
+
   .main-heading-2 {
     margin-bottom: 23px;
     font-size: 38px;
@@ -4912,8 +4928,8 @@ figcaption {
   }
 
   .image-26 {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .container-11 {
@@ -5614,7 +5630,7 @@ figcaption {
   }
 
   .hero-container {
-    background-image: url('../images/hero/hero-section-background.png');
+    background-image: url('../images/2026_images/optimized/hero-bg-mobile.webp');
     background-position: 50% 99%;
     background-repeat: repeat;
     background-size: 100% 133%;
@@ -5627,7 +5643,6 @@ figcaption {
   }
 
   .image-7 {
-    width: 147px;
     margin-left: 17px;
   }
 
@@ -5799,13 +5814,12 @@ figcaption {
     padding-top: 40px;
   }
 
-  .hero-wrapper-two {
-    background-image: url('../images/speakers/speakers-section-background-mobile.png');
+  .speaker {
+    background-image: url('../images/2026_images/optimized/speaker-bg-mobile.webp');
     background-position: 50% 100%;
     background-size: cover;
     padding-top: 37px;
     padding-bottom: 69px;
-    display: block;
   }
 
   .hero-image-3.shadow-two {
@@ -5862,8 +5876,8 @@ figcaption {
   }
 
   .image-21 {
-    width: 100%;
-    min-width: 26%;
+    width: 170px;
+    min-width: 0;
     margin-left: 0;
   }
 
@@ -5920,10 +5934,12 @@ figcaption {
   }
 
   .image-26 {
+    width: 40.5rem;
+    max-width: calc(100vw - .75rem);
     margin-top: 32px;
     margin-bottom: 39px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0;
+    padding-right: 0;
     display: block;
   }
 
@@ -6492,7 +6508,7 @@ figcaption {
   }
 
   .image-106 {
-    width: 124px;
+    width: 145px;
     margin-bottom: 0;
     padding-top: 0;
   }

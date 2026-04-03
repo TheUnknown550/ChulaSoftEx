@@ -190,7 +190,17 @@
 };
 
   speakerData.getSpeakerImagePath = function getSpeakerImagePath(speaker) {
-    return speaker && speaker.sourceImage ? speaker.sourceImage : "";
+    const sourceImage = speaker && speaker.sourceImage ? speaker.sourceImage : "";
+    if (!sourceImage) {
+      return "";
+    }
+
+    return sourceImage
+      .replace(
+        "images/speakers/2026-speakers-with-borders/",
+        "images/speakers/2026-speakers-with-borders-optimized/"
+      )
+      .replace(/\.[^.]+$/, ".webp");
   };
 
   speakerData.getSpeakerTeaserList = function getSpeakerTeaserList() {

@@ -12,8 +12,11 @@
   const desktopFallbackCardWidthRem = 8.25;
   const nameMarginExpansionPct = 18;
   const detailMarginExpansionPct = 14;
+  const resizeFitDebounceMs = 150;
   const speakerBaselineCache = new WeakMap();
   let fitFrame = 0;
+  let fitDebounceTimer = 0;
+  let lastFittedViewportWidth = -1;
 
   if (!speakerData) {
     return;
@@ -357,15 +360,44 @@
     updateSpeakerNameBottom(card, detailElement);
   }
 
-  function fitAllSpeakerCards() {
+  function getViewportWidth() {
+    return window.innerWidth || document.documentElement.clientWidth || 0;
+  }
+
+  function fitAllSpeakerCards(force) {
+    const viewportWidth = getViewportWidth();
+    if (!force && viewportWidth === lastFittedViewportWidth) {
+      return;
+    }
+
+    lastFittedViewportWidth = viewportWidth;
     document.querySelectorAll(".speaker-card").forEach(function fitCard(card) {
       fitSpeakerCardCopy(card);
     });
   }
 
-  function scheduleSpeakerCardFit() {
+  function queueSpeakerCardFit(force) {
     window.cancelAnimationFrame(fitFrame);
-    fitFrame = window.requestAnimationFrame(fitAllSpeakerCards);
+    fitFrame = window.requestAnimationFrame(function runFitFrame() {
+      fitAllSpeakerCards(force);
+    });
+  }
+
+  function scheduleSpeakerCardFit(options) {
+    const config = options || {};
+    const debounce = !!config.debounce;
+    const force = !!config.force;
+
+    window.clearTimeout(fitDebounceTimer);
+
+    if (debounce) {
+      fitDebounceTimer = window.setTimeout(function runDebouncedFit() {
+        queueSpeakerCardFit(force);
+      }, resizeFitDebounceMs);
+      return;
+    }
+
+    queueSpeakerCardFit(force);
   }
 
   function revealSpeakerCards(target) {
@@ -451,12 +483,20 @@
   renderSpeakerCollection("speaker-grid", speakerData.speakers2026, "main");
   setupSpeakerScrollEntrance("speaker-teaser-grid");
   setupSpeakerScrollEntrance("speaker-grid");
-  scheduleSpeakerCardFit();
+  scheduleSpeakerCardFit({ force: true });
 
-  window.addEventListener("resize", scheduleSpeakerCardFit, { passive: true });
-  window.addEventListener("load", scheduleSpeakerCardFit, { once: true });
+  window.addEventListener("resize", function onResize() {
+    scheduleSpeakerCardFit({ debounce: true });
+  }, { passive: true });
+  window.addEventListener("load", function onLoad() {
+    scheduleSpeakerCardFit({ force: true });
+  }, { once: true });
 
   if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(scheduleSpeakerCardFit).catch(function noop() {});
+    document.fonts.ready
+      .then(function onFontsReady() {
+        scheduleSpeakerCardFit({ force: true });
+      })
+      .catch(function noop() {});
   }
 })();
