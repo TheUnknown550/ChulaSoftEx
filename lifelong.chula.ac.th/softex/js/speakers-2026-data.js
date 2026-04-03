@@ -178,10 +178,10 @@
       "name": "คุณอรมน ทรัพย์ทวีธรรม",
       "sourceImage": "images/speakers/2026-speakers-with-borders/คุณอรมน ทรัพย์ทวีธรรม.png",
       "detail": "อธิบดีกรมทรัพย์สินทางปัญญา",
-      "name_left_margin": "39%",
+      "name_left_margin": "37%",
       "name_right_margin": "-11%",
       "name_font_size": "10px",
-      "description_left_margin": "40%",
+      "description_left_margin": "35%",
       "description_right_margin": "-10%",
       "description_font_size": "8px",
       "hasSourceImage": true

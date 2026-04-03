@@ -291,9 +291,23 @@
     }
   }
 
+  function updateSpeakerNameBottom(card, detailElement) {
+    const detailHeight =
+      detailElement && (detailElement.textContent || "").trim()
+        ? detailElement.getBoundingClientRect().height
+        : 0;
+
+    card.style.setProperty(
+      "--speaker-name-bottom",
+      `calc(var(--speaker-description-bottom) + ${detailHeight.toFixed(2)}px + .12rem)`
+    );
+  }
+
   function fitSpeakerCardCopy(card) {
     const baseline = ensureSpeakerBaseline(card);
     const mediaElement = card.querySelector(".speaker-card__media");
+    const nameElement = card.querySelector(".speaker-card__name");
+    const detailElement = card.querySelector(".speaker-card__detail");
     const actualCardWidth = mediaElement
       ? mediaElement.getBoundingClientRect().width
       : baseline.baselineCardWidth;
@@ -324,21 +338,23 @@
     );
     card.style.setProperty("--speaker-name-fit-scale", "1");
     card.style.setProperty("--speaker-detail-fit-scale", "1");
+    card.style.removeProperty("--speaker-name-bottom");
 
     fitTextBlock(
       card,
-      card.querySelector(".speaker-card__name"),
+      nameElement,
       "--speaker-name-fit-scale",
       baseline.nameTargetLines,
       minNameFitScale
     );
     fitTextBlock(
       card,
-      card.querySelector(".speaker-card__detail"),
+      detailElement,
       "--speaker-detail-fit-scale",
       baseline.detailTargetLines,
       minDetailFitScale
     );
+    updateSpeakerNameBottom(card, detailElement);
   }
 
   function fitAllSpeakerCards() {
