@@ -3635,19 +3635,38 @@ figcaption {
   color: var(--900);
   margin-bottom: 0;
   font-family: IBM Plex Sans Thai, sans-serif;
-  font-size: 1.8rem;
+  flex: 1;
+  min-width: 0;
+  font-size: clamp(1.1rem, .75rem + 1.15vw, 1.8rem);
   font-weight: 600;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .div-block-19 {
   flex-flow: row;
   justify-content: flex-start;
   align-items: center;
-  width: 416px;
-  max-width: 413.266px;
+  gap: 9px;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   max-height: none;
   display: flex;
+}
+
+.heading-13-meta {
+  font-size: .82em;
+}
+
+.heading-13-dense {
+  font-size: clamp(1.2rem, .72rem + 1.08vw, 1.8rem);
+}
+
+.heading-13-dense .heading-13-meta {
+  display: block;
+  margin-top: .18rem;
+  font-size: .8em;
 }
 
 .image-91 {
@@ -3657,7 +3676,7 @@ figcaption {
 
 .image-92 {
   margin-left: 0;
-  margin-right: 9px;
+  margin-right: 0;
 }
 
 .section-8 {
@@ -4562,6 +4581,20 @@ figcaption {
   .hero-split-3 {
     max-width: 100%;
     margin-bottom: 40px;
+  }
+
+  .heading-13 {
+    white-space: normal;
+  }
+
+  .heading-13-meta {
+    display: block;
+    margin-top: .18rem;
+    font-size: .78em;
+  }
+
+  .heading-13-dense {
+    font-size: clamp(1.2rem, 1.02rem + .85vw, 1.62rem);
   }
 
   .shadow-two-3 {
