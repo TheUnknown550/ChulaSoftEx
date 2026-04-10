@@ -1,6 +1,7 @@
 (function () {
   const speakerData = globalThis.SOFEX_SPEAKER_DATA;
   const desktopPrimaryRowCount = 6;
+  const minSpeakerCountForTwoRows = 4;
   const primaryRowEnterDelaySeconds = 0;
   const secondaryRowEnterDelaySeconds = 0.18;
   const nameMaxLines = 2;
@@ -89,6 +90,27 @@
         .join(""),
       "</div>"
     ].join("");
+  }
+
+  function getMainSpeakerRows(speakers) {
+    if (
+      speakers.length >= minSpeakerCountForTwoRows &&
+      speakers.length <= desktopPrimaryRowCount
+    ) {
+      const primaryRowCount = Math.ceil(speakers.length / 2);
+
+      return {
+        primary: speakers.slice(0, primaryRowCount),
+        secondary: speakers.slice(primaryRowCount),
+        isBalancedTwoRowLayout: true
+      };
+    }
+
+    return {
+      primary: speakers.slice(0, desktopPrimaryRowCount),
+      secondary: speakers.slice(desktopPrimaryRowCount),
+      isBalancedTwoRowLayout: false
+    };
   }
 
   function parseNumericValue(value) {
@@ -450,15 +472,21 @@
     }
 
     if (variant === "main") {
+      const rows = getMainSpeakerRows(speakers);
+      target.classList.toggle(
+        "speaker-grid--balanced-two-rows",
+        rows.isBalancedTwoRowLayout
+      );
+
       target.innerHTML = [
         createSpeakerRowMarkup(
-          speakers.slice(0, desktopPrimaryRowCount),
+          rows.primary,
           "speaker-grid__row--primary",
           variant,
           primaryRowEnterDelaySeconds
         ),
         createSpeakerRowMarkup(
-          speakers.slice(desktopPrimaryRowCount),
+          rows.secondary,
           "speaker-grid__row--secondary",
           variant,
           secondaryRowEnterDelaySeconds
@@ -480,7 +508,11 @@
     speakerData.getSpeakerTeaserList(),
     "teaser"
   );
-  renderSpeakerCollection("speaker-grid", speakerData.speakers2026, "main");
+  renderSpeakerCollection(
+    "speaker-grid",
+    speakerData.getVisibleSpeakers2026(),
+    "main"
+  );
   setupSpeakerScrollEntrance("speaker-teaser-grid");
   setupSpeakerScrollEntrance("speaker-grid");
   scheduleSpeakerCardFit({ force: true });

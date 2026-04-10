@@ -203,8 +203,27 @@
       .replace(/\.[^.]+$/, ".webp");
   };
 
+  speakerData.hiddenSpeakerIds = [
+    "speaker-03-somchai-bhakdisrivivat",
+    "speaker-05-juthamas-visalsingh",
+    "speaker-06-walanchalee-wattanacharoensilp",
+    "speaker-08-santitarn-setthapirathai",
+    "speaker-12-kharin-kangwanakitti",
+    "speaker-13-dolchai-bunyaratavej",
+    "speaker-14-natthawut-amornwiwat",
+    "speaker-15-oramon-sapthaweetham"
+  ];
+
+  speakerData.getVisibleSpeakers2026 = function getVisibleSpeakers2026() {
+    return speakerData.speakers2026.filter(function filterVisibleSpeaker(speaker) {
+      return !speakerData.hiddenSpeakerIds.includes(speaker.id);
+    });
+  };
+
   speakerData.getSpeakerTeaserList = function getSpeakerTeaserList() {
-    return speakerData.speakers2026.slice(0, speakerData.speakerTeaserCount);
+    return speakerData
+      .getVisibleSpeakers2026()
+      .slice(0, speakerData.speakerTeaserCount);
   };
 
   globalThis.SOFEX_SPEAKER_DATA = speakerData;

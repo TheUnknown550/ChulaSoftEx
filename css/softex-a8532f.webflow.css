@@ -6671,6 +6671,11 @@ figcaption {
   transform: translateX(-10%);
 }
 
+.speaker-grid--balanced-two-rows {
+  width: min(100%, 46rem);
+  transform: none;
+}
+
 .speaker-grid__row {
   justify-content: center;
   align-items: flex-end;
