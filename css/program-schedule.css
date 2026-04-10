@@ -291,6 +291,7 @@ button.program-schedule-calendar__day-number--interactive {
   font-weight: 700;
   line-height: 1;
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 .tuition-early-bird-card {
@@ -487,6 +488,7 @@ button.program-schedule-calendar__day-number--interactive {
   .tuition-fee-badge {
     padding: 14px 18px;
     font-size: 1.95rem;
+    margin-bottom: 16px;
   }
 
   .tuition-fee-link {
