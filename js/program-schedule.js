@@ -89,8 +89,7 @@
       category: "Exclucsive Site Visit",
       speakers: [
         "วิทยากรจาก Google Thailand",
-        "คุณณัฐวุฒิ อมรวิวัฒน์",
-        "ดร. วิโรจน์ จิรพัฒนกุล"
+        "คุณณัฐวุฒิ อมรวิวัฒน์"
       ]
     },
     {

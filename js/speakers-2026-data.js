@@ -207,6 +207,7 @@
     "speaker-03-somchai-bhakdisrivivat",
     "speaker-05-juthamas-visalsingh",
     "speaker-06-walanchalee-wattanacharoensilp",
+    "speaker-07-viroj-jiraphatnakul",
     "speaker-08-santitarn-setthapirathai",
     "speaker-12-kharin-kangwanakitti",
     "speaker-13-dolchai-bunyaratavej",
