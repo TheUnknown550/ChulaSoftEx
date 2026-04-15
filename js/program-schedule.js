@@ -2,6 +2,8 @@
   const calendarsTarget = document.getElementById("program-schedule-calendars");
   const legendTarget = document.getElementById("program-schedule-legend");
   const speakerCardsTarget = document.getElementById("speaker-cards");
+  const speakerData = globalThis.SOFEX_SPEAKER_DATA || null;
+  const hiddenSpeakerNameKeys = buildHiddenSpeakerNameKeySet(speakerData);
 
   const categoryOrder = [
     "Lectures and Workshops",
@@ -283,7 +285,7 @@
           '<p class="program-schedule-calendar__hover-value" data-field="date"></p>' +
           '<p class="program-schedule-calendar__hover-label">หัวข้อ</p>' +
           '<p class="program-schedule-calendar__hover-value program-schedule-calendar__hover-value--strong" data-field="topic"></p>' +
-          '<p class="program-schedule-calendar__hover-label">คนสอน</p>' +
+          '<p class="program-schedule-calendar__hover-label">วิทยากร</p>' +
           '<ul class="program-schedule-calendar__hover-speakers" data-field="speakers"></ul>' +
           "</div>" +
           "</section>"
@@ -354,7 +356,7 @@
 
     entries.forEach(function (entry) {
       entry.speakers.forEach(function (speaker) {
-        if (shouldSkipSpeakerLine(speaker)) {
+        if (shouldSkipSpeakerLine(speaker) || shouldHideSpeakerLine(speaker)) {
           return;
         }
 
@@ -376,8 +378,50 @@
     return /^Panel Discussion:?$/i.test((line || "").trim());
   }
 
+  function buildHiddenSpeakerNameKeySet(data) {
+    const keys = new Set();
+
+    if (
+      !data ||
+      !Array.isArray(data.hiddenSpeakerIds) ||
+      !Array.isArray(data.speakers2026)
+    ) {
+      return keys;
+    }
+
+    const hiddenIds = new Set(data.hiddenSpeakerIds);
+
+    data.speakers2026.forEach(function (speaker) {
+      if (!speaker || !hiddenIds.has(speaker.id)) {
+        return;
+      }
+
+      const speakerKey = toSpeakerKey(speaker.name);
+
+      if (speakerKey) {
+        keys.add(speakerKey);
+      }
+    });
+
+    return keys;
+  }
+
+  function shouldHideSpeakerLine(line) {
+    const speakerKey = toSpeakerKey(line);
+
+    return !!speakerKey && hiddenSpeakerNameKeys.has(speakerKey);
+  }
+
   function normalizeSpeakerName(line) {
     return (line || "").trim().replace(/^ดำเนินรายการโดย\s*/, "");
+  }
+
+  function toSpeakerKey(line) {
+    return normalizeSpeakerName(line)
+      .replace(/\s*\([^)]*\)\s*/g, " ")
+      .replace(/\./g, "")
+      .replace(/\s+/g, "")
+      .toLowerCase();
   }
 
   function showCalendarHoverCard(trigger, entriesByDate) {
@@ -400,7 +444,7 @@
     hoverCard.setAttribute("data-theme", category ? category.color : "orange");
     speakersField.innerHTML = entry.speakers
       .map(function (speaker) {
-        if (shouldSkipSpeakerLine(speaker)) {
+        if (shouldSkipSpeakerLine(speaker) || shouldHideSpeakerLine(speaker)) {
           return "";
         }
 
