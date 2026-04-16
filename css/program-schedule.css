@@ -395,6 +395,10 @@ button.program-schedule-calendar__day-number--interactive {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
+#who-should-attend {
+  scroll-margin-top: 0;
+}
+
 .footer-social-icon {
   display: inline-flex;
   align-items: center;
@@ -480,6 +484,10 @@ button.program-schedule-calendar__day-number--interactive {
   .footer-social-icon {
     width: 28px;
     height: 28px;
+  }
+
+  #who-should-attend {
+    scroll-margin-top: 0;
   }
 
   .footer-social-icon svg {
@@ -607,6 +615,10 @@ button.program-schedule-calendar__day-number--interactive {
   .footer-social-icon {
     width: 26px;
     height: 26px;
+  }
+
+  #who-should-attend {
+    scroll-margin-top: 0;
   }
 
   .footer-social-icon svg {
