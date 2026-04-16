@@ -1,6 +1,6 @@
 (function () {
   const speakerData = globalThis.SOFEX_SPEAKER_DATA;
-  const desktopPrimaryRowCount = 6;
+  const desktopPrimaryRowCount = 7;
   const minSpeakerCountForTwoRows = 4;
   const primaryRowEnterDelaySeconds = 0;
   const secondaryRowEnterDelaySeconds = 0.18;

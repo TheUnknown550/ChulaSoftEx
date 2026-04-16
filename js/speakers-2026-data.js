@@ -11,10 +11,10 @@
         detail: "อธิการบดีจุฬาลงกรณ์มหาวิทยาลัย",
         name_left_margin: "35%",
         name_right_margin: "5%",
-        name_font_size: "14px",
+        name_font_size: "11px",
         description_left_margin: "30%",
-        description_right_margin: "5%",
-        description_font_size: "11px",
+        description_right_margin: "6%",
+        description_font_size: "8px",
         hasSourceImage: true
       },
       {
@@ -22,12 +22,12 @@
         name: "ดร.อรรชกา สีบุญเรือง",
         sourceImage: "images/speakers/2026-speakers-with-borders/ดร.อรรชกา สีบุญเรือง.png",
         detail: "ที่ปรึกษาคณะกรรมการสำนักงานส่งเสริมเศรษฐกิจสร้างสรรค์",
-        name_left_margin: "34%",
-        name_right_margin: "4%",
-        name_font_size: "12px",
+        name_left_margin: "35%",
+        name_right_margin: "5%",
+        name_font_size: "11px",
         description_left_margin: "30%",
         description_right_margin: "6%",
-        description_font_size: "10px",
+        description_font_size: "8px",
         hasSourceImage: true
       },
       {
@@ -35,12 +35,12 @@
         name: "คุณไชยยง รัตนอังกูร",
         sourceImage: "images/speakers/2026-speakers-with-borders/คุณไชยยง รัตนอังกูร.png",
         detail: "ประธานกรรมการ สำนักงานส่งเสริมเศรษฐกิจสร้างสรรค์",
-        name_left_margin: "34%",
-        name_right_margin: "4%",
-        name_font_size: "12px",
+        name_left_margin: "35%",
+        name_right_margin: "5%",
+        name_font_size: "11px",
         description_left_margin: "30%",
         description_right_margin: "6%",
-        description_font_size: "10px",
+        description_font_size: "8px",
         hasSourceImage: true
       },
       {
@@ -48,12 +48,12 @@
         name: "คุณกอบกาญจน์ วัฒนวรางกูร",
         sourceImage: "images/speakers/2026-speakers-with-borders/คุณกอบกาญจน์ วัฒนวรางกูร.png",
         detail: "กรรมการผู้ทรงคุณวุฒิสำนักงานส่งเสริมเศรษฐกิจสร้างสรรค์",
-        name_left_margin: "28%",
+        name_left_margin: "30%",
         name_right_margin: "0%",
         name_font_size: "11px",
         description_left_margin: "30%",
         description_right_margin: "6%",
-        description_font_size: "9px",
+        description_font_size: "8px",
         hasSourceImage: true
       },
       {
@@ -61,25 +61,38 @@
         name: "คุณพิมพ์ใจ ลี้อิสสระนุกูล",
         sourceImage: "images/speakers/2026-speakers-with-borders/คุณพิมพ์ใจ ลี้อิสสระนุกูล.png",
         detail: "ประธานสภาอุตสาหกรรมแห่งประเทศไทย",
-        name_left_margin: "32%",
-        name_right_margin: "3%",
+        name_left_margin: "35%",
+        name_right_margin: "5%",
         name_font_size: "11px",
         description_left_margin: "30%",
-        description_right_margin: "5%",
-        description_font_size: "9px",
-        hasSourceImage: false
+        description_right_margin: "6%",
+        description_font_size: "8px",
+        hasSourceImage: true
+      },
+      {
+        id: "speaker-11-ek-patthanakul",
+        name: "ผศ.ดร.เอกก์ ภทรธนกุล",
+        sourceImage: "images/speakers/2026-speakers-with-borders/ผศ.ดร.เอกก์ ภทรธนกุล.png",
+        detail: "หัวหน้าภาควิชาการตลาด คณะพาณิชยศาสตร์และการบัญชี จุฬาลงกรณ์มหาวิทยาลัย",
+        name_left_margin: "35%",
+        name_right_margin: "5%",
+        name_font_size: "11px",
+        description_left_margin: "27%",
+        description_right_margin: "0%",
+        description_font_size: "8px",
+        hasSourceImage: true
       },
       {
         id: "speaker-06-chakrit-pichyangkura",
         name: "ดร.ชาคริต พิชญางกูร",
         sourceImage: "images/speakers/2026-speakers-with-borders/ดร.ชาคริต พิชญางกูร.png",
         detail: "ผู้อำนวยการสำนักงานส่งเสริมเศรษฐกิจสร้างสรรค์",
-        name_left_margin: "34%",
-        name_right_margin: "4%",
-        name_font_size: "12px",
+        name_left_margin: "35%",
+        name_right_margin: "5%",
+        name_font_size: "11px",
         description_left_margin: "30%",
         description_right_margin: "6%",
-        description_font_size: "10px",
+        description_font_size: "8px",
         hasSourceImage: true
       },
       {
@@ -87,25 +100,25 @@
         name: "Dr. hab. Magdalena Forex",
         sourceImage: "images/speakers/2026-speakers-with-borders/Dr. hab. Magdalena Florek.png",
         detail: "คณะกรรมการจาก International Place Branding Association (IPBA)",
-        name_left_margin: "45%",
-        name_right_margin: "-10%",
-        name_font_size: "11px",
-        description_left_margin: "40%",
+        name_left_margin: "35%",
+        name_right_margin: "-15%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
         id: "speaker-08-viriya-techarungruangroj",
         name: "รศ. ดร.วิริยะ เตชะรุ่งโรจน์",
         sourceImage: "images/speakers/2026-speakers-with-borders/รศ. ดร.วิริยะ เตชะรุ่งโรจน์.png",
-        detail: "ผู้อำนวยการสถาบันบริหารจัดการเทคโนโลยีและนวัตกรรม (INT) ม.มหิดล และนายกสมาคมวิชาชีพนักจัดการทรัพย์สินทางปัญญาและถ่ายทอดเทคโนโลยี (AITP)",
+        detail: "ผู้อำนวยการสถาบันบริหารจัดการเทคโนโลยีและนวัตกรรม (INT) มหาลัยมหิดล",
         name_left_margin: "40%",
         name_right_margin: "-10%",
         name_font_size: "9px",
-        description_left_margin: "40%",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -115,10 +128,10 @@
         detail: "อาจารย์ประจำสาขาวิชาการจัดการการท่องเที่ยวและการบริการ วิทยาลัยนานาชาติ มหาวิทยาลัยมหิดล",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "11px",
-        description_left_margin: "40%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -128,36 +141,10 @@
         detail: "นักเศรษฐศาสตร์และวิชาการอิสระด้านความสัมพันธ์ระหว่างประเทศ",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "11px",
-        description_left_margin: "40%",
-        description_right_margin: "-10%",
-        description_font_size: "8px",
-        hasSourceImage: true
-      },
-      {
-        id: "speaker-11-ek-patthanakul",
-        name: "ผศ.ดร.เอกก์ ภทรธนกุล",
-        sourceImage: "images/speakers/2026-speakers-with-borders/ผศ.ดร.เอกก์ ภทรธนกุล.png",
-        detail: "หัวหน้าภาควิชาการตลาด คณะพาณิชยศาสตร์และการบัญชี จุฬาลงกรณ์มหาวิทยาลัย",
-        name_left_margin: "40%",
-        name_right_margin: "-10%",
-        name_font_size: "10px",
-        description_left_margin: "40%",
-        description_right_margin: "-10%",
-        description_font_size: "8px",
-        hasSourceImage: true
-      },
-      {
-        id: "speaker-12-juthamas-visalsingh",
-        name: "ผศ.ดร.จุฑามาศ วิศาลสิงห์",
-        sourceImage: "images/speakers/2026-speakers-with-borders/ผศ.ดร.จุฑามาศ วิศาลสิงห์.png",
-        detail: "ประธานเครือข่าย Thailand Gastronomy Network",
-        name_left_margin: "30%",
-        name_right_margin: "0%",
-        name_font_size: "12px",
+        name_font_size: "9px",
         description_left_margin: "35%",
-        description_right_margin: "10%",
-        description_font_size: "9px",
+        description_right_margin: "-10%",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -167,10 +154,10 @@
         detail: "ผู้ร่วมก่อตั้งและประธานกลุ่มบริษัท Skooldio",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "10px",
+        name_font_size: "9px",
         description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "9px",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -180,10 +167,10 @@
         detail: "กรรมการผู้ทรงคุณวุฒิของคณะกรรมการนโยบายการเงิน ธนาคารแห่งประเทศไทย",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "10px",
-        description_left_margin: "40%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -191,12 +178,12 @@
         name: "คุณอรมน ทรัพย์ทวีธรรม",
         sourceImage: "images/speakers/2026-speakers-with-borders/คุณอรมน ทรัพย์ทวีธรรม.png",
         detail: "อธิบดีกรมทรัพย์สินทางปัญญา",
-        name_left_margin: "37%",
-        name_right_margin: "-11%",
-        name_font_size: "10px",
+        name_left_margin: "40%",
+        name_right_margin: "-10%",
+        name_font_size: "9px",
         description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -206,10 +193,23 @@
         detail: "ผู้อำนวยการด้านเศรษฐกิจสร้างสรรค์ จาก British Council",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "11px",
-        description_left_margin: "40%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
+        hasSourceImage: true
+      },
+      {
+        id: "speaker-12-juthamas-visalsingh",
+        name: "ผศ.ดร.จุฑามาศ วิศาลสิงห์",
+        sourceImage: "images/speakers/2026-speakers-with-borders/ผศ.ดร.จุฑามาศ วิศาลสิงห์.png",
+        detail: "ประธานเครือข่าย Thailand Gastronomy Network",
+        name_left_margin: "40%",
+        name_right_margin: "-10%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
+        description_right_margin: "-10%",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -219,10 +219,10 @@
         detail: "รองประธานสภาดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งประเทศไทย",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "10px",
-        description_left_margin: "40%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -230,26 +230,13 @@
         name: "คุณพิชัย จิราธิวัฒน์",
         sourceImage: "",
         detail: "กรรมการบริหาร กลุ่มเซ็นทรัล (Central Group)",
-        name_left_margin: "32%",
-        name_right_margin: "2%",
-        name_font_size: "11px",
-        description_left_margin: "30%",
-        description_right_margin: "5%",
-        description_font_size: "9px",
-        hasSourceImage: false
-      },
-      {
-        id: "speaker-19-dolchai-bunyaratavej",
-        name: "คุณดลชัย บุณยะรัตเวช",
-        sourceImage: "images/speakers/2026-speakers-with-borders/คุณดลชัย บุณยะรัตเวช.png",
-        detail: "ประธานกรรมการบริหาร INSPIRITY LIMITED PARTNERSHIP",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "10px",
-        description_left_margin: "40%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
-        hasSourceImage: true
+        description_font_size: "6px",
+        hasSourceImage: false
       },
       {
         id: "speaker-20-pichit-weerangkoobut",
@@ -258,10 +245,10 @@
         detail: "รองผู้อำนวยการสำนักงานส่งเสริมเศรษฐกิจสร้างสรรค์",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "11px",
-        description_left_margin: "40%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
         hasSourceImage: true
       },
       {
@@ -271,10 +258,23 @@
         detail: "ผู้อำนวยการสำนักภาคใต้ สำนักงานส่งเสริมเศรษฐกิจสร้างสรรค์",
         name_left_margin: "40%",
         name_right_margin: "-10%",
-        name_font_size: "11px",
-        description_left_margin: "40%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
         description_right_margin: "-10%",
-        description_font_size: "8px",
+        description_font_size: "6px",
+        hasSourceImage: true
+      },
+      {
+        id: "speaker-19-dolchai-bunyaratavej",
+        name: "คุณดลชัย บุณยะรัตเวช",
+        sourceImage: "images/speakers/2026-speakers-with-borders/คุณดลชัย บุณยะรัตเวช.png",
+        detail: "ประธานกรรมการบริหาร INSPIRITY LIMITED PARTNERSHIP",
+        name_left_margin: "40%",
+        name_right_margin: "-10%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
+        description_right_margin: "-10%",
+        description_font_size: "6px",
         hasSourceImage: true
       }
     ]
@@ -302,13 +302,11 @@
   speakerData.hiddenSpeakerIds = [
     "speaker-09-walanchalee-wattanacharoensilp",
     "speaker-10-somchai-bhakdisrivivat",
-    "speaker-12-juthamas-visalsingh",
     "speaker-13-viroj-jiraphatnakul",
     "speaker-14-santitarn-setthapirathai",
     "speaker-15-oramon-sapthaweetham",
     "speaker-17-natthawut-amornwiwat",
-    "speaker-18-pichai-jirathivat",
-    "speaker-19-dolchai-bunyaratavej"
+    "speaker-18-pichai-jirathivat"
   ];
 
   speakerData.getVisibleSpeakers2026 = function getVisibleSpeakers2026() {
