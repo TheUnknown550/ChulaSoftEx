@@ -6968,14 +6968,18 @@ figcaption {
   .speaker-grid {
     --speaker-card-width: 10.5rem;
     padding-left: 1rem;
-    padding-right: 1rem;
-    gap: 1.15rem;
+    padding-right: 1.35rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, var(--speaker-card-width)));
+    justify-content: center;
+    justify-items: center;
+    column-gap: .85rem;
+    row-gap: 1.15rem;
+    gap: 0;
   }
 
   .speaker-grid__row {
-    width: min(100%, calc(var(--speaker-card-width) * 2 + .85rem));
-    column-gap: .85rem;
-    row-gap: 1.15rem;
+    display: contents;
   }
 
 }
@@ -7000,14 +7004,13 @@ figcaption {
   .speaker-grid {
     --speaker-card-width: 9rem;
     padding-left: .875rem;
-    padding-right: .875rem;
-    gap: 1rem;
+    padding-right: 6rem;
+    column-gap: .7rem;
+    row-gap: 1rem;
   }
 
   .speaker-grid__row {
-    width: min(100%, calc(var(--speaker-card-width) * 2 + .7rem));
-    column-gap: .7rem;
-    row-gap: 1rem;
+    display: contents;
   }
 
   .speaker-card__media:hover .speaker-card__image {
