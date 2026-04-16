@@ -275,10 +275,19 @@ button.program-schedule-calendar__day-number--interactive {
   text-decoration: none;
 }
 
+.tuition-fee-badge-wrap {
+  width: min(100%, 820px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .tuition-fee-badge,
 .tuition-early-bird-card__intro,
 .tuition-early-bird-card__headline,
-.tuition-early-bird-card__price {
+.tuition-early-bird-card__price,
+.tuition-vat-note {
   font-family: IBM Plex Sans Thai, sans-serif;
 }
 
@@ -294,8 +303,37 @@ button.program-schedule-calendar__day-number--interactive {
   font-size: clamp(1.7rem, 4.1vw, 3.6rem);
   font-weight: 700;
   line-height: 1;
-  display: inline-block;
-  margin-bottom: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.tuition-vat-note {
+  color: #1f1f1f;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin: 10px 0 0;
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.tuition-vat-note--early-bird {
+  color: #ff7f33;
+  padding: 0 30px 14px;
+  margin-top: -2px;
+  font-size: clamp(0.82rem, 1vw, 0.96rem);
+  line-height: 1.2;
+}
+
+.tuition-vat-note--badge {
+  color: #fff;
+  margin-top: 10px;
+  font-size: clamp(0.72rem, 0.92vw, 0.92rem);
+  font-weight: 500;
+  line-height: 1.1;
+  opacity: 0.95;
 }
 
 .tuition-early-bird-card {
@@ -357,6 +395,29 @@ button.program-schedule-calendar__day-number--interactive {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  margin-right: 5px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff5d43, #ff8e1f);
+  flex: 0 0 auto;
+}
+
+.footer-social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+.footer-social-icon--facebook svg {
+  width: 12px;
+  height: 19px;
+}
+
 .tuition-fee-link:hover .tuition-early-bird-card,
 .tuition-fee-link:focus-visible .tuition-early-bird-card {
   transform: translateY(-2px);
@@ -401,6 +462,11 @@ button.program-schedule-calendar__day-number--interactive {
     margin-bottom: 14px;
   }
 
+  .tuition-vat-note--early-bird {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   .tuition-early-bird-card__intro {
     padding-left: 24px;
     padding-right: 24px;
@@ -409,6 +475,21 @@ button.program-schedule-calendar__day-number--interactive {
   .tuition-early-bird-card__headline {
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  .footer-social-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-social-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-social-icon--facebook svg {
+    width: 11px;
+    height: 17px;
   }
 
   .tuition-early-bird-card__price {
@@ -506,12 +587,41 @@ button.program-schedule-calendar__day-number--interactive {
     margin-bottom: 16px;
   }
 
+  .tuition-vat-note--badge {
+    margin-top: 8px;
+    font-size: 0.76rem;
+  }
+
   .tuition-fee-link {
     margin-bottom: 12px;
   }
 
+  .tuition-vat-note {
+    font-size: 0.95rem;
+  }
+
   .tuition-early-bird-card {
     border-radius: 22px;
+  }
+
+  .footer-social-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer-social-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .footer-social-icon--facebook svg {
+    width: 10px;
+    height: 16px;
+  }
+
+  .tuition-vat-note--early-bird {
+    padding: 0 16px 12px;
+    font-size: 0.8rem;
   }
 
   .tuition-early-bird-card__headline {
