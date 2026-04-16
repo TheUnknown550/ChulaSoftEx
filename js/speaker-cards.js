@@ -11,8 +11,6 @@
   const desktopPrimaryCardWidthRem = 12.4;
   const desktopSecondaryCardWidthRem = 9.1;
   const desktopFallbackCardWidthRem = 8.25;
-  const nameMarginExpansionPct = 18;
-  const detailMarginExpansionPct = 14;
   const resizeFitDebounceMs = 150;
   const speakerBaselineCache = new WeakMap();
   let fitFrame = 0;
@@ -215,26 +213,6 @@
     return measuredLines;
   }
 
-  function createEffectiveMargins(baseLeft, baseRight, actualWidth, baselineWidth, maxExpansionPct) {
-    const widthRatio = baselineWidth > 0 ? Math.min(1, actualWidth / baselineWidth) : 1;
-    const baseWidth = Math.max(10, 100 - baseLeft - baseRight);
-    const center = 50 + (baseLeft - baseRight) / 2;
-    const expandedWidth = Math.min(
-      96,
-      baseWidth + (1 - widthRatio) * maxExpansionPct
-    );
-    let nextLeft = center - expandedWidth / 2;
-    let nextRight = 100 - center - expandedWidth / 2;
-
-    nextLeft = Math.min(75, Math.max(-8, nextLeft));
-    nextRight = Math.min(45, Math.max(-14, nextRight));
-
-    return {
-      left: `${nextLeft.toFixed(2)}%`,
-      right: `${nextRight.toFixed(2)}%`
-    };
-  }
-
   function ensureSpeakerBaseline(card) {
     if (speakerBaselineCache.has(card)) {
       return speakerBaselineCache.get(card);
@@ -316,50 +294,19 @@
     }
   }
 
-  function updateSpeakerNameBottom(card, detailElement) {
-    const detailHeight =
-      detailElement && (detailElement.textContent || "").trim()
-        ? detailElement.getBoundingClientRect().height
-        : 0;
-
-    card.style.setProperty(
-      "--speaker-name-bottom",
-      `calc(var(--speaker-description-bottom) + ${detailHeight.toFixed(2)}px + .12rem)`
-    );
-  }
-
   function fitSpeakerCardCopy(card) {
     const baseline = ensureSpeakerBaseline(card);
-    const mediaElement = card.querySelector(".speaker-card__media");
     const nameElement = card.querySelector(".speaker-card__name");
     const detailElement = card.querySelector(".speaker-card__detail");
-    const actualCardWidth = mediaElement
-      ? mediaElement.getBoundingClientRect().width
-      : baseline.baselineCardWidth;
-    const nameMargins = createEffectiveMargins(
-      baseline.baseNameLeft,
-      baseline.baseNameRight,
-      actualCardWidth,
-      baseline.baselineCardWidth,
-      nameMarginExpansionPct
-    );
-    const detailMargins = createEffectiveMargins(
-      baseline.baseDetailLeft,
-      baseline.baseDetailRight,
-      actualCardWidth,
-      baseline.baselineCardWidth,
-      detailMarginExpansionPct
-    );
-
-    card.style.setProperty("--speaker-name-left-effective-margin", nameMargins.left);
-    card.style.setProperty("--speaker-name-right-effective-margin", nameMargins.right);
+    // Keep the overlay anchored to the same safe area of the artwork at every size.
+    // We scale text to fit, but do not widen or shift the text box on smaller screens.
+    card.style.removeProperty("--speaker-name-left-effective-margin");
+    card.style.removeProperty("--speaker-name-right-effective-margin");
+    card.style.removeProperty("--speaker-description-left-effective-margin");
+    card.style.removeProperty("--speaker-description-right-effective-margin");
     card.style.setProperty(
-      "--speaker-description-left-effective-margin",
-      detailMargins.left
-    );
-    card.style.setProperty(
-      "--speaker-description-right-effective-margin",
-      detailMargins.right
+      "--speaker-detail-max-lines",
+      String(Math.max(1, baseline.detailTargetLines))
     );
     card.style.setProperty("--speaker-name-fit-scale", "1");
     card.style.setProperty("--speaker-detail-fit-scale", "1");
@@ -379,7 +326,6 @@
       baseline.detailTargetLines,
       minDetailFitScale
     );
-    updateSpeakerNameBottom(card, detailElement);
   }
 
   function getViewportWidth() {

@@ -246,8 +246,8 @@
         name_left_margin: "35%",
         name_right_margin: "-10%",
         name_font_size: "9px",
-        description_left_margin: "40%",
-        description_right_margin: "-5%",
+        description_left_margin: "45%",
+        description_right_margin: "0%",
         description_font_size: "6px",
         hasSourceImage: true
       },
