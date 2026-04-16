@@ -4,10 +4,6 @@
   const minSpeakerCountForTwoRows = 4;
   const primaryRowEnterDelaySeconds = 0;
   const secondaryRowEnterDelaySeconds = 0.18;
-  const nameMaxLines = 2;
-  const detailMaxLines = 3;
-  const minNameFitScale = 0.52;
-  const minDetailFitScale = 0.72;
   const desktopPrimaryCardWidthRem = 12.4;
   const desktopSecondaryCardWidthRem = 9.1;
   const desktopFallbackCardWidthRem = 8.25;
@@ -20,6 +16,44 @@
   if (!speakerData) {
     return;
   }
+
+  const defaultSpeakerFitProfile = {
+    nameMaxLines: 2,
+    detailMaxLines: 3,
+    minNameFitScale: 0.52,
+    minDetailFitScale: 0.72,
+    marginShiftByViewport: {
+      default: { name: 0, detail: 0 },
+      tablet: { name: 0, detail: 0 },
+      tiny: { name: 0, detail: 0 }
+    }
+  };
+
+  const speakerCardFitProfiles = {
+    primary: {
+      nameMaxLines: defaultSpeakerFitProfile.nameMaxLines,
+      detailMaxLines: defaultSpeakerFitProfile.detailMaxLines,
+      minNameFitScale: defaultSpeakerFitProfile.minNameFitScale,
+      minDetailFitScale: defaultSpeakerFitProfile.minDetailFitScale,
+      marginShiftByViewport: {
+        default: { name: 2, detail: 2},
+        tablet: { name: 5, detail: 5 },
+        tiny: { name: 6.0, detail: 6.0 }
+      }
+    },
+    secondary: {
+      nameMaxLines: defaultSpeakerFitProfile.nameMaxLines,
+      detailMaxLines: defaultSpeakerFitProfile.detailMaxLines,
+      minNameFitScale: defaultSpeakerFitProfile.minNameFitScale,
+      minDetailFitScale: defaultSpeakerFitProfile.minDetailFitScale,
+      marginShiftByViewport: {
+        default: { name: 3, detail: 3 },
+        tablet: { name: -6, detail: -6 },
+        tiny: { name: 0, detail: 0 }
+      }
+    },
+    fallback: defaultSpeakerFitProfile
+  };
 
   function escapeHtml(value) {
     return String(value)
@@ -156,6 +190,34 @@
     return desktopFallbackCardWidthRem * rootFontSize;
   }
 
+  function getSpeakerCardRowKey(card) {
+    if (card.closest(".speaker-grid__row--secondary")) {
+      return "secondary";
+    }
+
+    if (card.closest(".speaker-grid__row--primary")) {
+      return "primary";
+    }
+
+    return "fallback";
+  }
+
+  function getSpeakerCardFitProfile(card) {
+    return speakerCardFitProfiles[getSpeakerCardRowKey(card)] || defaultSpeakerFitProfile;
+  }
+
+  function getViewportTier(viewportWidth) {
+    if (viewportWidth <= 479) {
+      return "tiny";
+    }
+
+    if (viewportWidth <= 991) {
+      return "tablet";
+    }
+
+    return "default";
+  }
+
   function getMeasureRoot() {
     let measureRoot = document.getElementById("speaker-card-measure-root");
 
@@ -213,11 +275,23 @@
     return measuredLines;
   }
 
+  function clampMarginValue(value) {
+    return Math.min(85, Math.max(-20, value));
+  }
+
+  function createShiftedMargins(baseLeft, baseRight, shiftAmount) {
+    return {
+      left: `${clampMarginValue(baseLeft + shiftAmount).toFixed(2)}%`,
+      right: `${clampMarginValue(baseRight - shiftAmount).toFixed(2)}%`
+    };
+  }
+
   function ensureSpeakerBaseline(card) {
     if (speakerBaselineCache.has(card)) {
       return speakerBaselineCache.get(card);
     }
 
+    const fitProfile = getSpeakerCardFitProfile(card);
     const nameElement = card.querySelector(".speaker-card__name");
     const detailElement = card.querySelector(".speaker-card__detail");
     const baselineCardWidth = getCardBaselineWidth(card);
@@ -248,7 +322,7 @@
       baseNameFontSize,
       baseDetailFontSize,
       nameTargetLines: Math.min(
-        nameMaxLines,
+        fitProfile.nameMaxLines,
         measureTextLines(
           nameElement,
           baselineCardWidth * (100 - baseNameLeft - baseNameRight) / 100,
@@ -256,7 +330,7 @@
         )
       ),
       detailTargetLines: Math.min(
-        detailMaxLines,
+        fitProfile.detailMaxLines,
         measureTextLines(
           detailElement,
           baselineCardWidth * (100 - baseDetailLeft - baseDetailRight) / 100,
@@ -294,16 +368,36 @@
     }
   }
 
-  function fitSpeakerCardCopy(card) {
+  function fitSpeakerCardCopy(card, viewportWidth) {
     const baseline = ensureSpeakerBaseline(card);
+    const fitProfile = getSpeakerCardFitProfile(card);
+    const viewportTier = getViewportTier(viewportWidth);
+    const marginShift =
+      fitProfile.marginShiftByViewport[viewportTier] ||
+      fitProfile.marginShiftByViewport.default;
     const nameElement = card.querySelector(".speaker-card__name");
     const detailElement = card.querySelector(".speaker-card__detail");
-    // Keep the overlay anchored to the same safe area of the artwork at every size.
-    // We scale text to fit, but do not widen or shift the text box on smaller screens.
-    card.style.removeProperty("--speaker-name-left-effective-margin");
-    card.style.removeProperty("--speaker-name-right-effective-margin");
-    card.style.removeProperty("--speaker-description-left-effective-margin");
-    card.style.removeProperty("--speaker-description-right-effective-margin");
+    const nameMargins = createShiftedMargins(
+      baseline.baseNameLeft,
+      baseline.baseNameRight,
+      marginShift.name || 0
+    );
+    const detailMargins = createShiftedMargins(
+      baseline.baseDetailLeft,
+      baseline.baseDetailRight,
+      marginShift.detail || 0
+    );
+
+    card.style.setProperty("--speaker-name-left-effective-margin", nameMargins.left);
+    card.style.setProperty("--speaker-name-right-effective-margin", nameMargins.right);
+    card.style.setProperty(
+      "--speaker-description-left-effective-margin",
+      detailMargins.left
+    );
+    card.style.setProperty(
+      "--speaker-description-right-effective-margin",
+      detailMargins.right
+    );
     card.style.setProperty(
       "--speaker-detail-max-lines",
       String(Math.max(1, baseline.detailTargetLines))
@@ -317,14 +411,14 @@
       nameElement,
       "--speaker-name-fit-scale",
       baseline.nameTargetLines,
-      minNameFitScale
+      fitProfile.minNameFitScale
     );
     fitTextBlock(
       card,
       detailElement,
       "--speaker-detail-fit-scale",
       baseline.detailTargetLines,
-      minDetailFitScale
+      fitProfile.minDetailFitScale
     );
   }
 
@@ -340,7 +434,7 @@
 
     lastFittedViewportWidth = viewportWidth;
     document.querySelectorAll(".speaker-card").forEach(function fitCard(card) {
-      fitSpeakerCardCopy(card);
+      fitSpeakerCardCopy(card, viewportWidth);
     });
   }
 

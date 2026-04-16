@@ -6790,7 +6790,7 @@ figcaption {
   line-height: 1.2;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: var(--speaker-detail-max-lines);
   -webkit-box-orient: vertical;
   overflow-wrap: break-word;
   word-break: normal;
