@@ -37,8 +37,7 @@
       speakers: [
         "ศ. ดร.วิเลิศ ภูริวัชร",
         "ผศ.ดร.เอกก์ ภทรธนกุล",
-        "คุณไชยยง รัตนอังกูร",
-        "ดร.ชาคริต พิชญางกูร"
+        "คุณไชยยง รัตนอังกูร"
       ]
     },
     {
@@ -50,7 +49,7 @@
         "วิทยากรจาก Dib Bangkok",
         "รศ. ดร.วิริยะ เตชะรุ่งโรจน์",
         "Dr. hab. Magdalena Forex",
-        "ดร.วลัญชลี วัฒนเจริญศิลป์"
+        "ดร.ชาคริต พิชญางกูร"
       ]
     },
     {
@@ -80,8 +79,7 @@
       category: "Exclucsive Site Visit",
       speakers: [
         "วิทยากรจาก The Central Park",
-        "คุณดลชัย บุณยะรัตเวช",
-        "คุณพิชัย จิราธิวัฒน์"
+        "คุณดลชัย บุณยะรัตเวช"
       ]
     },
     {
@@ -90,8 +88,7 @@
       topic: "AI Power in Creativity",
       category: "Exclucsive Site Visit",
       speakers: [
-        "วิทยากรจาก Google Thailand",
-        "คุณณัฐวุฒิ อมรวิวัฒน์"
+        "วิทยากรจาก Google Thailand"
       ]
     },
     {
@@ -100,8 +97,7 @@
       topic: "Geopolitics & Global Shift",
       category: "Lectures and Workshops",
       speakers: [
-        "ดร. สันติธาร เสถียรไทย",
-        "รศ.ดร.สมชาย ภคภาสน์วิวัฒน์"
+        "วิทยากรจาก UNESCO"
       ]
     },
     {
@@ -110,8 +106,6 @@
       topic: "Cultural Capital & Content IP",
       category: "Lectures and Workshops",
       speakers: [
-        "คุณอรมน ทรัพย์ทวีธรรม",
-        "วิทยากรจาก UNESCO",
         "Panel Discussion:",
         "คุณกอบกาญจน์ วัฒนวรางกูร",
         "คุณพิมพ์ใจ ลี้อิสสระนุกูล",
