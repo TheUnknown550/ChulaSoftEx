@@ -73,7 +73,7 @@
         id: "speaker-11-ek-patthanakul",
         name: "ผศ.ดร.เอกก์ ภทรธนกุล",
         sourceImage: "images/speakers/2026-speakers-with-borders/ผศ.ดร.เอกก์ ภทรธนกุล.png",
-        detail: "หัวหน้าภาควิชาการตลาด คณะพาณิชยศาสตร์และการบัญชี จุฬาลงกรณ์มหาวิทยาลัย",
+        detail: "หัวหน้าภาควิชาการตลาด คณะพาณิชยศาสตร์และการบัญชี จุฬาลงกรณ์มหาวิทยาลัย และนายกสมาคมการตลาดแห่งประเทศไทย",
         name_left_margin: "35%",
         name_right_margin: "5%",
         name_font_size: "11px",
