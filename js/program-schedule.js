@@ -97,7 +97,7 @@
     {
       dateLabel: "ศ. 3 ก.ค. 69 (13:00 - 18:00)",
       dates: ["2026-07-03"],
-      topic: "AI Power in Creativity",
+      topic: "Geopolitics & Global Shift",
       category: "Exclucsive Site Visit",
       speakers: [
         "TBC"
@@ -106,7 +106,7 @@
     {
       dateLabel: "ศ. 10 ก.ค. 69 (13:00 - 18:00)",
       dates: ["2026-07-10"],
-      topic: "Geopolitics & Global Shift",
+      topic: "AI Power in Creativity",
       category: "Lectures and Workshops",
       speakers: [
         "TBC"
