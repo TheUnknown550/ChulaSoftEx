@@ -37,7 +37,8 @@
       speakers: [
         "ศ. ดร.วิเลิศ ภูริวัชร",
         "ผศ.ดร.เอกก์ ภทรธนกุล",
-        "คุณไชยยง รัตนอังกูร"
+        "คุณไชยยง รัตนอังกูร",
+        "ดร. อรรชกา สีบุญเรือง"
       ]
     },
     {
@@ -58,18 +59,29 @@
       topic: "Creative Organization & Competitiveness",
       category: "Exclucsive Site Visit",
       speakers: [
-        "ผศ.ดร.จุฑามาศ วิศาลสิงห์",
+        "วิทยากรจาก UNESCO",
         "Ms. Rehana Mughal (British Council)"
       ]
     },
     {
-      dateLabel: "ส.-อา 20-21 มิ.ย. 69",
-      dates: ["2026-06-20", "2026-06-21"],
+      dateLabel: "ส. 20 มิ.ย. 69",
+      dates: ["2026-06-20"],
       topic: "Creative Cultural Ecosystem Integration",
       category: "Experiential Learning Trip",
       speakers: [
         "คุณพิชิต วีรังคบุตร",
-        "คุณฆฤณ กังวานกิตติ (ผอ. CEA สงขลา)"
+        "คุณฆฤณ กังวานกิตติ (ผอ. CEA สงขลา)",
+        "ดร.ชาคริต พิชญางกูร",
+        "ผู้อำนวยการ TCEB"
+      ]
+    },
+    {
+      dateLabel: "อา. 21 มิ.ย. 69",
+      dates: ["2026-06-21"],
+      topic: "Creative Cultural Ecosystem Integration",
+      category: "Experiential Learning Trip",
+      speakers: [
+        "ผศ.ดร.จุฑามาศ วิศาลสิงห์"
       ]
     },
     {
@@ -88,7 +100,7 @@
       topic: "AI Power in Creativity",
       category: "Exclucsive Site Visit",
       speakers: [
-        "วิทยากรจาก Google Thailand"
+        "TBC"
       ]
     },
     {
@@ -97,7 +109,7 @@
       topic: "Geopolitics & Global Shift",
       category: "Lectures and Workshops",
       speakers: [
-        "วิทยากรจาก UNESCO"
+        "TBC"
       ]
     },
     {
