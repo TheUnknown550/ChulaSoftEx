@@ -99,7 +99,7 @@
       dateLabel: "ศ. 3 ก.ค. 69 (13:00 - 18:00)",
       dates: ["2026-07-03"],
       topic: "AI Power in Creativity",
-      category: "Lectures and Workshops",
+      category: "Exclucsive Site Visit",
       speakers: [
         "TBC",
         "ดร. สันติธาร เสถียรไทย",
@@ -110,14 +110,14 @@
       dateLabel: "ศ. 10 ก.ค. 69 (13:00 - 18:00)",
       dates: ["2026-07-10"],
       topic: "Geopolitics & Global Shift",
-      category: "Exclucsive Site Visit",
+      category: "Lectures and Workshops",
       speakers: [
         "TBC",
         "รศ.ดร.สมชาย ภคภาสน์วิวัฒน์",
         "ดร. วิโรจน์ จิรพัฒนกุล"
       ]
     },
-    
+
     {
       dateLabel: "ศ. 17 ก.ค. 69 (13:00 - 18:00)",
       dates: ["2026-07-17"],
