@@ -50,7 +50,7 @@
         "วิทยากรจาก Dib Bangkok",
         "รศ. ดร.วิริยะ เตชะรุ่งโรจน์",
         "Dr. hab. Magdalena Forex",
-        "ดร.ชาคริต พิชญางกูร"
+        "ร.ศ. ดร.วลัญชลี วัฒนาเจริญศิลป์"
       ]
     },
     {
@@ -69,10 +69,10 @@
       topic: "Creative Cultural Ecosystem Integration",
       category: "Experiential Learning Trip",
       speakers: [
+        "ดร.ชาคริต พิชญางกูร",
+        "ผู้อำนวยการ TCEB",
         "คุณพิชิต วีรังคบุตร",
         "คุณฆฤณ กังวานกิตติ (ผอ. CEA สงขลา)",
-        "ดร.ชาคริต พิชญางกูร",
-        "ผู้อำนวยการ TCEB"
       ]
     },
     {
@@ -91,25 +91,30 @@
       category: "Exclucsive Site Visit",
       speakers: [
         "วิทยากรจาก The Central Park",
+        "คุณพิชัย จิราธิวัฒน์",
         "คุณดลชัย บุณยะรัตเวช"
       ]
     },
     {
       dateLabel: "ศ. 3 ก.ค. 69 (13:00 - 18:00)",
       dates: ["2026-07-03"],
-      topic: "Geopolitics & Global Shift",
-      category: "Exclucsive Site Visit",
+      topic: "AI Power in Creativity",
+      category: "Lectures and Workshops",
       speakers: [
-        "TBC"
+        "TBC",
+        "ดร. สันติธาร เสถียรไทย",
+        "คุณณัฐวุฒิ อมรวิวัฒน์"
       ]
     },
     {
       dateLabel: "ศ. 10 ก.ค. 69 (13:00 - 18:00)",
       dates: ["2026-07-10"],
-      topic: "AI Power in Creativity",
-      category: "Lectures and Workshops",
+      topic: "Geopolitics & Global Shift",
+      category: "Exclucsive Site Visit",
       speakers: [
-        "TBC"
+        "TBC",
+        "รศ.ดร.สมชาย ภคภาสน์วิวัฒน์",
+        "ดร. วิโรจน์ จิรพัฒนกุล"
       ]
     },
     {
