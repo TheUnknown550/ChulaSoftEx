@@ -35,10 +35,9 @@
       topic: "Orientation/Foundations of Creative Economy",
       category: "Lectures and Workshops",
       speakers: [
+        "ดร.ชาคริต พิชญางกูร",
         "ศ. ดร.วิเลิศ ภูริวัชร",
-        "ผศ.ดร.เอกก์ ภทรธนกุล",
-        "คุณไชยยง รัตนอังกูร",
-        "ดร. อรรชกา สีบุญเรือง"
+        "ผศ.ดร.เอกก์ ภทรธนกุล"
       ]
     },
     {
@@ -47,9 +46,8 @@
       topic: "City Branding & Global Assets",
       category: "Exclucsive Site Visit",
       speakers: [
-        "วิทยากรจาก Dib Bangkok",
         "รศ. ดร.วิริยะ เตชะรุ่งโรจน์",
-        "Dr. hab. Magdalena Forex",
+        "Dr. hab. Magdalena Florek",
         "ร.ศ. ดร.วลัญชลี วัฒนาเจริญศิลป์"
       ]
     },
@@ -59,26 +57,27 @@
       topic: "Creative Organization & Competitiveness",
       category: "Exclucsive Site Visit",
       speakers: [
-        "วิทยากรจาก UNESCO",
+        "Dr. Feng Jing",
+        "คุณมณีรัตน์ อนุโลมสมบัติ",
         "Ms. Rehana Mughal (British Council)"
       ]
     },
     {
       dateLabel: "ส. 20 มิ.ย. 69",
       dates: ["2026-06-20"],
-      topic: "Creative Cultural Ecosystem Integration",
+      topic: "Songkhla Catalyst Site Visit",
       category: "Experiential Learning Trip",
       speakers: [
         "ดร.ชาคริต พิชญางกูร",
-        "ผู้อำนวยการ TCEB",
+        "ดร.ศุภวรรณ ตีระรัตน์",
         "คุณพิชิต วีรังคบุตร",
-        "คุณฆฤณ กังวานกิตติ (ผอ. CEA สงขลา)",
+        "คุณฆฤณ กังวานกิตติ (ผอ. CEA สงขลา)"
       ]
     },
     {
       dateLabel: "อา. 21 มิ.ย. 69",
       dates: ["2026-06-21"],
-      topic: "Creative Cultural Ecosystem Integration",
+      topic: "Songkhla Catalyst Site Visit",
       category: "Experiential Learning Trip",
       speakers: [
         "ผศ.ดร.จุฑามาศ วิศาลสิงห์"
@@ -90,9 +89,9 @@
       topic: "Global Destination Branding",
       category: "Exclucsive Site Visit",
       speakers: [
-        "วิทยากรจาก The Central Park",
-        "คุณพิชัย จิราธิวัฒน์",
-        "คุณดลชัย บุณยะรัตเวช"
+        "วิทยากรจาก DIB Bangkok",
+        "คุณดลชัย บุณยะรัตเวช",
+        "คุณกอบกาญจน์ วัฒนวรางกูร"
       ]
     },
     {
@@ -101,9 +100,9 @@
       topic: "AI Power in Creativity",
       category: "Exclucsive Site Visit",
       speakers: [
-        "TBC",
-        "ดร. สันติธาร เสถียรไทย",
-        "คุณณัฐวุฒิ อมรวิวัฒน์"
+        "วิทยากรจาก Huawei",
+        "วิทยากรผู้เชี่ยวชาญด้าน Future of Work / Tech-driven Agency",
+        "วิทยากรจากสำนักงานนวัตกรรมแห่งชาติ (NIA)"
       ]
     },
     {
@@ -112,21 +111,18 @@
       topic: "Geopolitics & Global Shift",
       category: "Lectures and Workshops",
       speakers: [
-        "TBC",
+        "ศ. ดร.วิเลิศ ภูริวัชร",
         "รศ.ดร.สมชาย ภคภาสน์วิวัฒน์",
         "ดร. วิโรจน์ จิรพัฒนกุล"
       ]
     },
-
     {
       dateLabel: "ศ. 17 ก.ค. 69 (13:00 - 18:00)",
       dates: ["2026-07-17"],
       topic: "Cultural Capital & Content IP",
       category: "Lectures and Workshops",
       speakers: [
-        "Panel Discussion:",
-        "คุณกอบกาญจน์ วัฒนวรางกูร",
-        "คุณพิมพ์ใจ ลี้อิสสระนุกูล",
+        "คุณอรมน ทรัพย์ทวีธรรม",
         "ดำเนินรายการโดย ผศ.ดร.เอกก์ ภทรธนกุล"
       ]
     },
