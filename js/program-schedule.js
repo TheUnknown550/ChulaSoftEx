@@ -101,8 +101,8 @@
       category: "Exclucsive Site Visit",
       speakers: [
         "วิทยากรจาก Huawei",
-        "วิทยากรผู้เชี่ยวชาญด้าน Future of Work / Tech-driven Agency",
-        "วิทยากรจากสำนักงานนวัตกรรมแห่งชาติ (NIA)"
+        "คุณสุรศักดิ์ เหลืองอุษากุล",
+        "ดร.กริชผกา บุญเฟื่อง"
       ]
     },
     {
