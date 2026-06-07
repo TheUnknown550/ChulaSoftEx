@@ -177,7 +177,7 @@
       },
       {
         id: "speaker-24-maneeratana-anulomsombat",
-        name: "มณีรัตน์ อนุโลมสมบัติ",
+        name: "คุณมณีรัตน์ อนุโลมสมบัติ",
         sourceImage: "images/speakers/2026-speakers-with-borders/มณีรัตน์ อนุโลมสมบัติ .png",
         detail: "ประธานเจ้าหน้าที่บริหาร SEA (ประเทศไทย)",
         name_left_margin: "40%",
