@@ -271,7 +271,7 @@
         id: "speaker-13-viroj-jiraphatnakul",
         name: "ดร. วิโรจน์ จิรพัฒนกุล",
         sourceImage: "images/speakers/2026-speakers-with-borders/ดร. วิโรจน์ จิรพัฒนกุล.png",
-        detail: "ผู้ร่วมก่อตั้งและประธานกลุ่มบริษัท Skooldio",
+        detail: "ผู้ร่วมก่อตั้ง และประธาน Skooldio Group",
         name_left_margin: "40%",
         name_right_margin: "-10%",
         name_font_size: "9px",
@@ -344,8 +344,6 @@
   speakerData.hiddenSpeakerIds = [
     "speaker-03-chaiyong-rattanangkun",
     "speaker-05-pimjai-leeissaranukul",
-    "speaker-09-walanchalee-wattanacharoensilp",
-    "speaker-13-viroj-jiraphatnakul",
     "speaker-14-santitarn-setthapirathai",
     "speaker-17-natthawut-amornwiwat",
     "speaker-18-pichai-jirathivat"
