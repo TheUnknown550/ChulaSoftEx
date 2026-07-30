@@ -305,6 +305,19 @@
         description_font_size: "6px",
         hasSourceImage: true
       },
+      {
+        id: "speaker-31-ratirat-na-songkhla",
+        name: "ผศ. ดร.รติรัตน์ ณ สงขลา",
+        sourceImage: "images/speakers/2026-speakers-with-borders/ผศ. ดร.รติรัตน์ ณ สงขลา.png",
+        detail: "อาจารย์ประจำภาควิชาการตลาด คณะพาณิชยศาสตร์และการบัญชี จุฬาลงกรณ์มหาวิทยาลัย",
+        name_left_margin: "40%",
+        name_right_margin: "-10%",
+        name_font_size: "9px",
+        description_left_margin: "35%",
+        description_right_margin: "-10%",
+        description_font_size: "6px",
+        hasSourceImage: true
+      },
       // --- Hidden (kept in data but not displayed) ---
       {
         id: "speaker-03-chaiyong-rattanangkun",
