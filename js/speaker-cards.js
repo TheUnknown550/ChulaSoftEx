@@ -2,8 +2,10 @@
   const speakerData = globalThis.SOFEX_SPEAKER_DATA;
   const desktopPrimaryRowCount = 7;
   const minSpeakerCountForTwoRows = 4;
+  const secondaryRowMaxCount = 7;
   const primaryRowEnterDelaySeconds = 0;
   const secondaryRowEnterDelaySeconds = 0.18;
+  const tertiaryRowEnterDelaySeconds = 0.36;
   const desktopPrimaryCardWidthRem = 12.4;
   const desktopSecondaryCardWidthRem = 9.1;
   const desktopFallbackCardWidthRem = 8.25;
@@ -134,13 +136,29 @@
       return {
         primary: speakers.slice(0, primaryRowCount),
         secondary: speakers.slice(primaryRowCount),
+        tertiary: [],
         isBalancedTwoRowLayout: true
       };
     }
 
+    const primary = speakers.slice(0, desktopPrimaryRowCount);
+    const remaining = speakers.slice(desktopPrimaryRowCount);
+
+    if (remaining.length > secondaryRowMaxCount) {
+      const secondaryRowCount = Math.ceil(remaining.length / 2);
+
+      return {
+        primary,
+        secondary: remaining.slice(0, secondaryRowCount),
+        tertiary: remaining.slice(secondaryRowCount),
+        isBalancedTwoRowLayout: false
+      };
+    }
+
     return {
-      primary: speakers.slice(0, desktopPrimaryRowCount),
-      secondary: speakers.slice(desktopPrimaryRowCount),
+      primary,
+      secondary: remaining,
+      tertiary: [],
       isBalancedTwoRowLayout: false
     };
   }
@@ -179,7 +197,10 @@
   function getCardBaselineWidth(card) {
     const rootFontSize = getRootFontSize();
 
-    if (card.closest(".speaker-grid__row--secondary")) {
+    if (
+      card.closest(".speaker-grid__row--secondary") ||
+      card.closest(".speaker-grid__row--tertiary")
+    ) {
       return desktopSecondaryCardWidthRem * rootFontSize;
     }
 
@@ -191,7 +212,10 @@
   }
 
   function getSpeakerCardRowKey(card) {
-    if (card.closest(".speaker-grid__row--secondary")) {
+    if (
+      card.closest(".speaker-grid__row--secondary") ||
+      card.closest(".speaker-grid__row--tertiary")
+    ) {
       return "secondary";
     }
 
@@ -530,6 +554,12 @@
           "speaker-grid__row--secondary",
           variant,
           secondaryRowEnterDelaySeconds
+        ),
+        createSpeakerRowMarkup(
+          rows.tertiary,
+          "speaker-grid__row--tertiary",
+          variant,
+          tertiaryRowEnterDelaySeconds
         )
       ].join("");
 

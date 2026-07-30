@@ -6712,7 +6712,8 @@ figcaption {
   margin-left: calc(var(--speaker-primary-overlap) * -1);
 }
 
-.speaker-grid__row--secondary .speaker-card + .speaker-card {
+.speaker-grid__row--secondary .speaker-card + .speaker-card,
+.speaker-grid__row--tertiary .speaker-card + .speaker-card {
   margin-left: calc(var(--speaker-secondary-overlap) * -1);
 }
 
@@ -6848,11 +6849,13 @@ figcaption {
   max-width: none;
 }
 
-.speaker-grid__row--secondary .speaker-card {
+.speaker-grid__row--secondary .speaker-card,
+.speaker-grid__row--tertiary .speaker-card {
   --speaker-detail-reserved-height: calc((var(--speaker-description-font-size) * 1.2 * var(--speaker-detail-max-lines) + .15rem) * var(--speaker-font-scale));
 }
 
-.speaker-grid__row--secondary .speaker-card__media {
+.speaker-grid__row--secondary .speaker-card__media,
+.speaker-grid__row--tertiary .speaker-card__media {
   width: var(--speaker-secondary-card-width);
   max-width: none;
 }
@@ -6960,7 +6963,8 @@ figcaption {
   }
 
   .speaker-grid__row--primary .speaker-card + .speaker-card,
-  .speaker-grid__row--secondary .speaker-card + .speaker-card {
+  .speaker-grid__row--secondary .speaker-card + .speaker-card,
+  .speaker-grid__row--tertiary .speaker-card + .speaker-card {
     margin-left: 0;
   }
 
@@ -6970,7 +6974,8 @@ figcaption {
   }
 
   .speaker-grid__row--primary .speaker-card__media,
-  .speaker-grid__row--secondary .speaker-card__media {
+  .speaker-grid__row--secondary .speaker-card__media,
+  .speaker-grid__row--tertiary .speaker-card__media {
     width: 100%;
     max-width: none;
   }
