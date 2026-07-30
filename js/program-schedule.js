@@ -69,6 +69,7 @@
       category: "Experiential Learning Trip",
       speakers: [
         "ดร.ชาคริต พิชญางกูร",
+        "คุณศุภานิช เฑียรสิงห์",
         "คุณพิชิต วีรังคบุตร",
         "คุณฆฤณ กังวานกิตติ (ผอ. CEA สงขลา)"
       ]
@@ -99,6 +100,7 @@
       topic: "AI Power in Creativity",
       category: "Exclucsive Site Visit",
       speakers: [
+        "คุณสุรศักดิ์ วนิชเวทย์พิบูล",
         "คุณสุรศักดิ์ เหลืองอุษากุล",
         "ดร.กริชผกา บุญเฟื่อง"
       ]
@@ -109,6 +111,7 @@
       topic: "Geopolitics & Global Shift",
       category: "Lectures and Workshops",
       speakers: [
+        "ผศ. ดร.เอกก์ ภทรธนกุล",
         "ศ. ดร.วิเลิศ ภูริวัชร",
         "ดร. วิโรจน์ จิรพัฒนกุล"
       ]
@@ -120,6 +123,8 @@
       category: "Lectures and Workshops",
       speakers: [
         "คุณอรมน ทรัพย์ทวีธรรม",
+        "คุณจีระยุ จารุกิตติวรกานต์",
+        "คุณนาคาญ์ ทวิชาวัฒน์"
       ]
     },
     {
