@@ -69,7 +69,6 @@
       category: "Experiential Learning Trip",
       speakers: [
         "ดร.ชาคริต พิชญางกูร",
-        "ดร.ศุภวรรณ ตีระรัตน์",
         "คุณพิชิต วีรังคบุตร",
         "คุณฆฤณ กังวานกิตติ (ผอ. CEA สงขลา)"
       ]
@@ -100,7 +99,6 @@
       topic: "AI Power in Creativity",
       category: "Exclucsive Site Visit",
       speakers: [
-        "วิทยากรจาก Huawei",
         "คุณสุรศักดิ์ เหลืองอุษากุล",
         "ดร.กริชผกา บุญเฟื่อง"
       ]
@@ -112,7 +110,6 @@
       category: "Lectures and Workshops",
       speakers: [
         "ศ. ดร.วิเลิศ ภูริวัชร",
-        "รศ.ดร.สมชาย ภคภาสน์วิวัฒน์",
         "ดร. วิโรจน์ จิรพัฒนกุล"
       ]
     },
@@ -123,7 +120,6 @@
       category: "Lectures and Workshops",
       speakers: [
         "คุณอรมน ทรัพย์ทวีธรรม",
-        "ดำเนินรายการโดย ผศ.ดร.เอกก์ ภทรธนกุล"
       ]
     },
     {
