@@ -349,7 +349,7 @@
         id: "speaker-09-walanchalee-wattanacharoensilp",
         name: "รศ. ดร.วลัญชลี วัฒนาเจริญศิลป์",
         sourceImage: "images/speakers/2026-speakers-with-borders/รศ. ดร. วลัญชลี วัฒนาเจริญศิลป์.png",
-        detail: "อาจารย์ประจำสาขาวิชาการจัดการการท่องเที่ยวและการบริการ วิทยาลัยนานาชาติ มหาวิทยาลัยมหิดล",
+        detail: "อาจารย์ประจำกลุ่มสาขาวิชาบริหารธุรกิจ วิทยาลัยนานาชาติ มหาวิทยาลัยมหิดล",
         name_left_margin: "30%",
         name_right_margin: "-20%",
         name_font_size: "7px",
